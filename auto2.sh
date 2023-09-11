@@ -12,6 +12,17 @@ pip3 install --upgrade setuptools && python3 -m pip install --upgrade pip && pip
 clear
 echo -e "\nPip2 and pip3 are upgraded\n"
 sleep 3
+# pyenv
+curl https://pyenv.run | bash
+
+cat > ~/.zshrc <<-'EOF'
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+EOF
+
+
 
 sleep 2
 #go
@@ -19,7 +30,7 @@ sudo apt-get install -y golang
 clear
 sleep 2
 
-echo 'export GOPATH=~/go' >> ~/.zshrc
+echo 'export GOPATH=$HOME/go' >> ~/.zshrc
 echo 'export GOROOT=/usr/local/go' >> ~/.zshrc
 echo 'export PATH=$PATH:$GOROOT/bin/:$GOPATH/bin' >> ~/.zshrc
 source ~/.zshrc
@@ -74,4 +85,23 @@ git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
 clear
 sleep 2
 pip install bloodyAD
+
+
+# impacket
+pyenv install 3.8.18
+sleep 2
+pyenv virtualenv 3.8.18 impack
+pyenv activate impack
+git clone https://github.com/ThePorgs/impacket/ 
+cd impacket
+pip3 install -r requirements.txt 
+python3 setup.py install
+
 clear
+sleep 2
+cat > ~/.zshrc <<-'EOF'
+export PATH="$PATH:/home/kali/.pyenv/versions/impack/bin"
+EOF
+
+clear
+cd ~
