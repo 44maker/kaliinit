@@ -6,13 +6,13 @@ echo -e "\n44maker's Kali Setup Script\n"
 
 # Start SSH
 sudo systemctl start ssh
-update-rc.d ssh enable
+sudo update-rc.d ssh enable
 echo -e "\nSSH is running\n"
 sleep 3
 
 # APT source
-mv /etc/apt/sources.list /etc/apt/sources.list.bak
-cat > /etc/apt/sources.list << EOF
+sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo cat > /etc/apt/sources.list << EOF
 deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
 deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
 EOF
