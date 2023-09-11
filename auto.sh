@@ -5,7 +5,7 @@ set +e
 echo -e "\n44maker's Kali Setup Script\n"
 
 # Start SSH
-systemctl start ssh
+sudo systemctl start ssh
 update-rc.d ssh enable
 echo -e "\nSSH is running\n"
 sleep 3
@@ -18,13 +18,13 @@ deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
 EOF
 
 # APT update and upgrade
-apt-get update -y && apt-get upgrade -y
+sudo apt-get update -y && sudo apt-get upgrade -y
 clear
 echo -e "\nAPT update and upgrade is done\n"
 sleep 3
 
 # Tools
-apt install git libssl-dev libffi-dev build-essential libkrb5-dev systemd-timesyncd -y
+sudo apt install git libssl-dev libffi-dev build-essential libkrb5-dev systemd-timesyncd -y
 clear
 echo -e "\ngit libssl-dev libffi-dev build-essential is installed\n"
 sleep 3
@@ -43,7 +43,7 @@ sleep 3
 
 sleep 2
 #go
-apt-get install -y golang
+sudo apt-get install -y golang
 echo 'export GOPATH=/root/go-workspace' >> ~/.zshrc
 echo 'export GOROOT=/usr/local/go' >> ~/.zshrc
 echo 'export PATH=$PATH:$GOROOT/bin/:$GOPATH/bin' >> ~/.zshrc
@@ -51,43 +51,43 @@ source ~/.zshrc
 
 
 # Feroxbuster & SecLists
-apt install feroxbuster -y
+sudo apt install feroxbuster -y
 
 # Rockyou
-gzip -d /usr/share/wordlists/rockyou.txt.gz
+sudo gzip -d /usr/share/wordlists/rockyou.txt.gz
 
 # Zsteg
 gem install zsteg
 
 # Steghide
-apt-get install steghide -y
+sudo apt-get install steghide -y
 
 # binwalk
 sudo apt install binwalk
 
 # chisel
-apt-get install chisel -y
+sudo apt-get install chisel -y
 
 # Gmpy2
 pip3 install gmpy2
 
 # Dirsearch
-apt install dirsearch -y
+sudo apt install dirsearch -y
 
 # Stegseek
 wget https://github.com/RickdeJager/stegseek/releases/download/v0.6/stegseek_0.6-1.deb && dpkg -i stegseek_0.6-1.deb && rm stegseek_0.6-1.deb
 
 # Outguess
-apt install outguess -y
+sudo apt install outguess -y
 
 # Gobuster
-apt install gobuster -y
+sudo apt install gobuster -y
 
 # Git-dumper
 pip3 install git-dumper
 
 # Tmux
-apt install tmux -y
+sudo apt install tmux -y
 sleep 3
 cat > ~/.tmux.conf <<-'EOF'
 #tmux attach 如果无分离终端则新建
@@ -137,7 +137,7 @@ git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
 
 clear
 #ad
-apt install neo4j bloodhound.py bloudhound -y
+sudo apt install neo4j bloodhound.py bloudhound -y
 go install github.com/ropnop/kerbrute@latest
 
 git clone https://github.com/ThePorgs/impacket/ 
