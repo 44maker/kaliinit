@@ -16,7 +16,10 @@ sleep 3
 sleep 2
 #go
 sudo apt-get install -y golang
-echo 'export GOPATH=/root/go-workspace' >> ~/.zshrc
+sleep 2
+clear
+
+echo 'export GOPATH=~/go' >> ~/.zshrc
 echo 'export GOROOT=/usr/local/go' >> ~/.zshrc
 echo 'export PATH=$PATH:$GOROOT/bin/:$GOPATH/bin' >> ~/.zshrc
 source ~/.zshrc
@@ -52,8 +55,5 @@ EOF
 #ad
 go install github.com/ropnop/kerbrute@latest
 sleep 2
-git clone https://github.com/ThePorgs/impacket/ 
-pip3 install -r requirements.txt 
-python3 setup.py install
 pip install bloodyAD
 clear
