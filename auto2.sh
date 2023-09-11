@@ -16,16 +16,17 @@ sleep 3
 sleep 2
 #go
 sudo apt-get install -y golang
-sleep 2
 clear
+sleep 2
 
 echo 'export GOPATH=~/go' >> ~/.zshrc
 echo 'export GOROOT=/usr/local/go' >> ~/.zshrc
 echo 'export PATH=$PATH:$GOROOT/bin/:$GOPATH/bin' >> ~/.zshrc
 source ~/.zshrc
+clear
 
 #tmux
-sleep 1
+sleep 2
 cat > ~/.tmux.conf <<-'EOF'
 #tmux attach 如果无分离终端则新建
 new-session
@@ -52,8 +53,25 @@ selectp -t 1 # select the new, second (1) pane
 splitw -h -p 50 # split it into two halves
 selectp -t 0 # go back to the first pane
 EOF
+sleep 2
+
+clear
+
 #ad
 go install github.com/ropnop/kerbrute@latest
+
+#binary
+mkdir -p tools/binary&&cd tools/binary
+sleep 3
+wget https://github.com/opsec-infosec/nmap-static-binaries/releases/download/v2/nmap-x64.tar.gz
+sleep 2
+wget https://github.com/jpillora/chisel/releases/download/v1.9.1/chisel_1.9.1_linux_386.gz
+cd ../
+mkdir ad&&cd ad
+git clone https://github.com/urbanadventurer/username-anarchy.git
+git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
+
+clear
 sleep 2
 pip install bloodyAD
 clear
