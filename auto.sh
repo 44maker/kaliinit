@@ -24,7 +24,7 @@ echo -e "\nAPT update and upgrade is done\n"
 sleep 3
 
 # Tools
-apt install git libssl-dev libffi-dev build-essential -y
+apt install git libssl-dev libffi-dev build-essential libkrb5-dev systemd-timesyncd -y
 clear
 echo -e "\ngit libssl-dev libffi-dev build-essential is installed\n"
 sleep 3
@@ -40,6 +40,21 @@ pip3 install --upgrade setuptools && python3 -m pip install --upgrade pip && pip
 clear
 echo -e "\nPip2 and pip3 are upgraded\n"
 sleep 3
+#pyenv
+curl https://pyenv.run | bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+exec $SHELL
+
+sleep 2
+#go
+apt-get install -y golang
+echo 'export GOPATH=/root/go-workspace' >> ~/.zshrc
+echo 'export GOROOT=/usr/local/go' >> ~/.zshrc
+echo 'export PATH=$PATH:$GOROOT/bin/:$GOPATH/bin' >> ~/.zshrc
+source ~/.zshrc
+
 
 # Feroxbuster & SecLists
 apt install feroxbuster -y
@@ -58,9 +73,6 @@ sudo apt install binwalk
 
 # chisel
 apt-get install chisel -y
-
-# impacket
-apt install python3-impacket -y
 
 # Gmpy2
 pip3 install gmpy2
@@ -117,52 +129,47 @@ sudo dpkg -i rustscan_2.0.1_amd64.deb
 sleep 2
 rm -rf rustscan_2.0.1_amd64.deb
 clear
-
-mkdir tools&&cd tools
+#binary
+mkdir -p tools/binary&&cd tools/binary
 sleep 3
 wget https://github.com/opsec-infosec/nmap-static-binaries/releases/download/v2/nmap-x64.tar.gz
 sleep 2
 wget https://github.com/jpillora/chisel/releases/download/v1.9.1/chisel_1.9.1_linux_386.gz
 cd ../
+mkdir ad&&cd ad
+git clone https://github.com/urbanadventurer/username-anarchy.git
+git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
+
+
+clear
+#ad
+apt install neo4j bloodhound.py bloudhound -y
+go install github.com/ropnop/kerbrute@latest
+
+pipenv shell 
+git clone https://github.com/ThePorgs/impacket/ 
+pip3 install -r requirements.txt 
+python3 setup.py install
+pip install bloodyAD
 
 clear
 
-# Verify
-not_installed=""
-installed=""
 
-declare -a software=("pip2" "zsteg" "steghide" "dirsearch" "stegseek" "outguess" "gobuster" "git-dumper" "tmux" "rustscan")
-
-for i in "${software[@]}"
+# Verify installation
+tools=("nmap" "chisel" "kerbrute" "impacket" "bloodhound.py" "neo4j" "bloodhound" "feroxbuster" "steghide" "zsteg" "binwalk" "gobuster" "outguess" "tmux" "rustscan" "stegseek" "dirsearch" "git-dumper" "gmpy2" "pipenv")
+success=1
+for tool in "${tools[@]}"
 do
-    which $i
-    if [ $? -eq 0 ]; then
-        installed+="$i\n"
+    if [ -x "$(command -v $tool)" ]; then
+        echo "$tool is installed"
     else
-        not_installed+="$i\n"
+        echo "$tool is not installed"
+        success=0
     fi
 done
 
-if [ -d "/usr/share/wordlists/seclists" ]; then
-    installed+="SecLists\n"
+if [ $success -eq 1 ]; then
+    echo "success"
 else
-    not_installed+="SecLists\n"
+    echo "installation failed"
 fi
-
-if [ -f "/usr/share/wordlists/rockyou.txt" ]; then
-    installed+="rockyou\n"
-else
-    not_installed+="rockyou\n"
-fi
-
-if python3 -c "import gmpy2" &>/dev/null; then
-    installed+="gmpy2\n"
-else
-    not_installed+="gmpy2\n"
-fi
-
-clear
-echo -e "\nInstalled: \n"
-echo -e $installed
-echo -e "\nNot installed: \n"
-echo -e $not_installed
