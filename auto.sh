@@ -5,8 +5,8 @@ set +e
 echo -e "\n44maker's Kali Setup Script\n"
 
 # Start SSH
-sudo systemctl start ssh
-sudo update-rc.d ssh enable
+systemctl start ssh
+update-rc.d ssh enable
 echo -e "\nSSH is running\n"
 sleep 3
 
@@ -76,19 +76,7 @@ sudo dpkg -i rustscan_2.0.1_amd64.deb
 sleep 2
 rm -rf rustscan_2.0.1_amd64.deb
 clear
-#binary
-mkdir -p tools/binary&&cd tools/binary
-sleep 3
-wget https://github.com/opsec-infosec/nmap-static-binaries/releases/download/v2/nmap-x64.tar.gz
-sleep 2
-wget https://github.com/jpillora/chisel/releases/download/v1.9.1/chisel_1.9.1_linux_386.gz
-cd ../
-mkdir ad&&cd ad
-git clone https://github.com/urbanadventurer/username-anarchy.git
-git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
 
-
-clear
 #ad
 sudo apt install neo4j bloodhound.py bloudhound -y
 
