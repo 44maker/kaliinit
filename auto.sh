@@ -29,26 +29,6 @@ clear
 echo -e "\ngit libssl-dev libffi-dev build-essential is installed\n"
 sleep 3
 
-# Python2 pip
-wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
-python2 get-pip.py
-clear
-sleep 3
-
-# Pip2 and pip3
-pip3 install --upgrade setuptools && python3 -m pip install --upgrade pip && pip2 install --upgrade setuptools && python2 -m pip install --upgrade pip
-clear
-echo -e "\nPip2 and pip3 are upgraded\n"
-sleep 3
-
-sleep 2
-#go
-sudo apt-get install -y golang
-echo 'export GOPATH=/root/go-workspace' >> ~/.zshrc
-echo 'export GOROOT=/usr/local/go' >> ~/.zshrc
-echo 'export PATH=$PATH:$GOROOT/bin/:$GOPATH/bin' >> ~/.zshrc
-source ~/.zshrc
-
 
 # Feroxbuster & SecLists
 sudo apt install feroxbuster -y
@@ -88,33 +68,6 @@ pip3 install git-dumper
 
 # Tmux
 sudo apt install tmux -y
-sleep 3
-cat > ~/.tmux.conf <<-'EOF'
-#tmux attach 如果无分离终端则新建
-new-session
-# split panes using | and -
-bind | split-window -h
-bind - split-window -v
-unbind ' " '
-unbind %
-bind -r k select-pane -U # 绑定k为↑
-bind -r j select-pane -D # 绑定j为↓
-bind -r h select-pane -L # 绑定h为←
-bind -r l select-pane -R # 绑定l为→
-# reload config file (change file location to your the tmux.conf you want to use)
-bind r source-file ~/.tmux.conf; display-message "Config reloaded.."
-bind V source-file ~/.tmux/layout1         #ctrl b + shift v => change
-EOF
-
-mkdir ~/.tmux
-sleep 1
-cat > ~/.tmux/layout1 <<-'EOF'
-selectp -t 0 # select the first (0) pane
-splitw -v -p 50 # split it into two halves
-selectp -t 1 # select the new, second (1) pane
-splitw -h -p 50 # split it into two halves
-selectp -t 0 # go back to the first pane
-EOF
 
 # Rustscan
 wget https://github.com/RustScan/RustScan/releases/download/2.0.1/rustscan_2.0.1_amd64.deb
@@ -138,31 +91,5 @@ git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
 clear
 #ad
 sudo apt install neo4j bloodhound.py bloudhound -y
-go install github.com/ropnop/kerbrute@latest
-
-git clone https://github.com/ThePorgs/impacket/ 
-pip3 install -r requirements.txt 
-python3 setup.py install
-pip install bloodyAD
 
 clear
-
-
-# Verify installation
-tools=("nmap" "chisel" "kerbrute" "impacket" "bloodhound.py" "neo4j" "bloodhound" "feroxbuster" "steghide" "zsteg" "binwalk" "gobuster" "outguess" "tmux" "rustscan" "stegseek" "dirsearch" "git-dumper" "gmpy2" "pipenv")
-success=1
-for tool in "${tools[@]}"
-do
-    if [ -x "$(command -v $tool)" ]; then
-        echo "$tool is installed"
-    else
-        echo "$tool is not installed"
-        success=0
-    fi
-done
-
-if [ $success -eq 1 ]; then
-    echo "success"
-else
-    echo "installation failed"
-fi
