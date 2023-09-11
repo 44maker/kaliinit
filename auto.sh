@@ -40,12 +40,6 @@ pip3 install --upgrade setuptools && python3 -m pip install --upgrade pip && pip
 clear
 echo -e "\nPip2 and pip3 are upgraded\n"
 sleep 3
-#pyenv
-curl https://pyenv.run | bash
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
-exec $SHELL
 
 sleep 2
 #go
@@ -146,7 +140,6 @@ clear
 apt install neo4j bloodhound.py bloudhound -y
 go install github.com/ropnop/kerbrute@latest
 
-pipenv shell 
 git clone https://github.com/ThePorgs/impacket/ 
 pip3 install -r requirements.txt 
 python3 setup.py install
