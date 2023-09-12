@@ -108,5 +108,3 @@ EOF
 
 clear
 cd ~
-sleep 3
-init 6
