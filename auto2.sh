@@ -15,7 +15,7 @@ sleep 3
 # pyenv
 curl https://pyenv.run | bash
 
-cat > ~/.zshrc <<-'EOF'
+cat >> ~/.zshrc <<-'EOF'
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
