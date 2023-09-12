@@ -79,6 +79,6 @@ clear
 
 sleep 2
 #ad
-sudo apt install neo4j bloodhound.py bloudhound -y
+sudo apt install neo4j bloodhound.py bloodhound -y
 
 clear
