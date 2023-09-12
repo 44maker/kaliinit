@@ -109,3 +109,4 @@ EOF
 
 clear
 cd ~
+source .zshrc
