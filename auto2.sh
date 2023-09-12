@@ -86,8 +86,9 @@ git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
 clear
 sleep 2
 pip install bloodyAD
-
-
+echo "export PATH="$PATH:/home/kali/.local/bin"" >> ~/.zshrc
+clear
+sleep 1
 # impacket
 pyenv install 3.8.18
 sleep 2
