@@ -99,7 +99,7 @@ python3 setup.py install
 
 clear
 sleep 2
-cat > ~/.zshrc <<-'EOF'
+cat >> ~/.zshrc <<-'EOF'
 export PATH="$PATH:/home/kali/.pyenv/versions/impack/bin"
 EOF
 
