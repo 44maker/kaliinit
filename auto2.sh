@@ -15,6 +15,7 @@ sleep 3
 # pyenv
 curl https://pyenv.run | bash
 
+sleep 2
 cat >> ~/.zshrc <<-'EOF'
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -31,7 +32,7 @@ clear
 sleep 2
 
 echo 'export GOPATH=$HOME/go' >> ~/.zshrc
-echo 'export GOROOT=/usr/local/go' >> ~/.zshrc
+echo 'export GOROOT=/usr/lib/go' >> ~/.zshrc
 echo 'export PATH=$PATH:$GOROOT/bin/:$GOPATH/bin' >> ~/.zshrc
 source ~/.zshrc
 clear
@@ -91,7 +92,9 @@ pip install bloodyAD
 pyenv install 3.8.18
 sleep 2
 pyenv virtualenv 3.8.18 impack
+sleep 2
 pyenv activate impack
+sleep 2
 git clone https://github.com/ThePorgs/impacket/ 
 cd impacket
 pip3 install -r requirements.txt 
