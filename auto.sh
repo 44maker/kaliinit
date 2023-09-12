@@ -77,6 +77,7 @@ sleep 2
 rm -rf rustscan_2.0.1_amd64.deb
 clear
 
+sleep 2
 #ad
 sudo apt install neo4j bloodhound.py bloudhound -y
 
