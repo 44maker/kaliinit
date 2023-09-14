@@ -17,8 +17,7 @@ curl https://pyenv.run | bash
 
 sleep 2
 cat >> ~/.zshrc <<-'EOF'
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 EOF
@@ -92,9 +91,9 @@ sleep 1
 # impacket
 pyenv install 3.8.18
 sleep 2
-pyenv virtualenv 3.8.18 impack
+pyenv virtualenv 3.8.18 impacket
 sleep 2
-pyenv activate impack
+pyenv activate impacket
 sleep 2
 git clone https://github.com/ThePorgs/impacket/ 
 cd impacket
@@ -104,7 +103,7 @@ python3 setup.py install
 clear
 sleep 2
 cat >> ~/.zshrc <<-'EOF'
-export PATH="$PATH:/home/kali/.pyenv/versions/impack/bin"
+export PATH="$PATH:/home/kali/.pyenv/versions/impacket/bin"
 EOF
 
 clear
