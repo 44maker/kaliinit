@@ -29,6 +29,17 @@ clear
 echo -e "\ngit libssl-dev libffi-dev build-essential is installed\n"
 sleep 3
 
+# rtl8812au
+sudo apt install realtek-rtl88xxau-dkms -y
+sudo apt install dkms -y
+git clone https://github.com/aircrack-ng/rtl8812au
+cd rtl8812au/
+make
+sudo make install
+cd ../
+rm -rf rtl8812au
+
+sleep 2
 
 # Feroxbuster & SecLists
 sudo apt install feroxbuster -y
