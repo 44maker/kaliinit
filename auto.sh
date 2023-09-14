@@ -1,6 +1,6 @@
 #!/bin/bash
 set +e
-
+clear
 # Graphical interface
 echo -e "\n44maker's Kali Setup Script\n"
 
@@ -24,7 +24,7 @@ echo -e "\nAPT update and upgrade is done\n"
 sleep 3
 
 # Tools
-sudo apt install git libssl-dev libffi-dev build-essential libkrb5-dev systemd-timesyncd -y
+sudo apt install git libssl-dev libffi-dev build-essential libkrb5-dev systemd-timesyncd ntpdate -y
 clear
 echo -e "\ngit libssl-dev libffi-dev build-essential is installed\n"
 sleep 3
