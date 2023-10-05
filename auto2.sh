@@ -1,5 +1,7 @@
 #!/bin/bash
 set +e
+# set never lock screen
+xfconf-query -c xfce4-session -p /general/LockCommand -s "xflock4 --no-lockscreen"
 
 # Python2 pip
 wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
