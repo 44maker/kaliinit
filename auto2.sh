@@ -79,6 +79,7 @@ sleep 3
 wget https://github.com/opsec-infosec/nmap-static-binaries/releases/download/v2/nmap-x64.tar.gz
 sleep 2
 wget https://github.com/jpillora/chisel/releases/download/v1.9.1/chisel_1.9.1_linux_386.gz
+wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
 cd ../
 mkdir ad&&cd ad
 git clone https://github.com/urbanadventurer/username-anarchy.git
@@ -87,8 +88,10 @@ cd ../
 mkdir windows && cd windows
 wget https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
 wget https://github.com/itm4n/FullPowers/releases/download/v0.1/FullPowers.exe
-wget https://github.com/int0x33/nc.exe/raw/master/nc64.exe
+wget https://raw.githubusercontent.com/int0x33/nc.exe/master/nc64.exe
 wget https://github.com/tylerdotrar/SigmaPotato/releases/download/v1.2.6/SigmaPotato.exe
+wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/winpeas.bat
+wget https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1
 cd ../
 mkdir webshell && cd webshell
 wget https://raw.githubusercontent.com/flozz/p0wny-shell/master/shell.php
