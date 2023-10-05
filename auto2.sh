@@ -137,3 +137,6 @@ echo "alias impacket="clear"pyenv activate impacket" >> .zshrc
 echo "alias deactivate="source deactivate"" >> .zshrc
 echo "alias cme="crackmapexec"" >> .zshrc
 clear
+sleep 3
+source ~/.zshrc
+clear
