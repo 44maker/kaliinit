@@ -34,7 +34,9 @@ curl -sS https://starship.rs/install.sh | sh
 echo "eval "$(starship init zsh)"" >> ~/.zshrc
 
 mkdir -p ~/.config
-starship.toml
+cd ~/.config
+wget https://raw.githubusercontent.com/44maker/kaliinit/main/starship.toml
+cd ~
 ```
 
 # Todo
