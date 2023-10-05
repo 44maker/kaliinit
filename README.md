@@ -22,7 +22,12 @@ wget https://raw.githubusercontent.com/44maker/kaliinit/main/kalisetup.sh && chm
 7. impacket
 8. nc64.exe
 9. ...
+# Manual installation
+```bash
+wget https://download.sublimetext.com/sublime-text_build-4152_amd64.deb
+sudo dpkg -i sublime-text_build-4152_amd64.deb
 
+```
 # Todo
 - [ ] add other tools
 - [ ] fix bugs
