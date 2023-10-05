@@ -4,6 +4,11 @@ clear
 # Graphical interface
 echo -e "\n44maker's Kali Setup Script\n"
 
+sleep 1
+rm -rf Documents Music Pictures Public Templates Videos
+sleep 1
+clear
+
 # Start SSH
 systemctl start ssh
 update-rc.d ssh enable
