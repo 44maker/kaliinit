@@ -17,17 +17,16 @@ sleep 3
 # pyenv
 curl https://pyenv.run | bash
 
-sleep 2
+sleep 4
+
 cat >> ~/.zshrc <<-'EOF'
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 EOF
-
-
-
 sleep 2
+
 #go
 sudo apt-get install -y golang
 clear
@@ -129,13 +128,11 @@ EOF
 
 sleep 2
 clear
-curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
-clear
 cd ~
-echo "alias cl="clear"" >> .zshrc
-echo "alias impacket="clear"pyenv activate impacket" >> .zshrc
-echo "alias deactivate="source deactivate"" >> .zshrc
-echo "alias cme="crackmapexec"" >> .zshrc
+echo "alias cl='clear' " >> .zshrc
+echo "alias impacket='pyenv activate impacket' " >> .zshrc
+echo "alias deactivate='source deactivate' " >> .zshrc
+echo "alias cme='crackmapexec' " >> .zshrc
 clear
 sleep 3
 source ~/.zshrc
