@@ -81,7 +81,13 @@ wget https://github.com/opsec-infosec/nmap-static-binaries/releases/download/v2/
 sleep 2
 wget https://github.com/jpillora/chisel/releases/download/v1.9.1/chisel_1.9.1_linux_386.gz
 wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
-cd ../
+wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy64
+mkdir exploit && cd exploit
+curl -fsSL https://raw.githubusercontent.com/ly4k/PwnKit/main/PwnKit -o PwnKit
+wget https://raw.githubusercontent.com/Liuk3r/CVE-2023-32233/main/exploit.c
+gcc -Wall -o CVE-2023-32233.sh exploit.c -lmnl -lnftnl --static
+rm -rf exploit.c
+cd ../../
 mkdir ad&&cd ad
 git clone https://github.com/urbanadventurer/username-anarchy.git
 git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
