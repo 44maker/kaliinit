@@ -84,9 +84,8 @@ wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy64
 mkdir exploit && cd exploit
 curl -fsSL https://raw.githubusercontent.com/ly4k/PwnKit/main/PwnKit -o PwnKit
-wget https://raw.githubusercontent.com/Liuk3r/CVE-2023-32233/main/exploit.c
-gcc -Wall -o CVE-2023-32233.sh exploit.c -lmnl -lnftnl --static
-rm -rf exploit.c
+wget https://raw.githubusercontent.com/Liuk3r/CVE-2023-32233/main/exploit.c && mv exploit.c CVE-2023-32233.c
+wget https://raw.githubusercontent.com/Arinerron/CVE-2022-0847-DirtyPipe-Exploit/main/exploit.c && mv exploit.c dirtypipe.c
 cd ../../
 mkdir ad&&cd ad
 git clone https://github.com/urbanadventurer/username-anarchy.git
