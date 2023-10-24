@@ -29,7 +29,7 @@ echo -e "\nAPT update and upgrade is done\n"
 sleep 3
 
 # Tools
-sudo apt install git libssl-dev libffi-dev build-essential libkrb5-dev systemd-timesyncd ntpdate -y
+sudo apt install git libssl-dev libffi-dev build-essential libkrb5-dev systemd-timesyncd ntpdate gcc libmnl-dev libnftnl-dev -y
 clear
 echo -e "\ngit libssl-dev libffi-dev build-essential is installed\n"
 sleep 3
