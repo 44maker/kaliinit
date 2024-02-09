@@ -111,7 +111,7 @@ clear
 sleep 2
 pip install bloodyAD
 pip install pwncat-cs
-echo "export PATH="$PATH:/home/kali/.local/bin"" >> ~/.zshrc
+echo "export PATH="$PATH:$HOME/.local/bin"" >> ~/.zshrc
 clear
 sleep 1
 # impacket
@@ -129,7 +129,7 @@ python3 setup.py install
 clear
 sleep 2
 cat >> ~/.zshrc <<-'EOF'
-export PATH="$PATH:/home/kali/.pyenv/versions/impacket/bin"
+export PATH="$PATH:$HOME/.pyenv/versions/impacket/bin"
 EOF
 
 sleep 2
