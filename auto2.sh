@@ -110,8 +110,8 @@ sleep 2
 clear
 sleep 2
 pip install bloodyAD
+sleep 2
 pip install pwncat-cs
-echo "export PATH="$PATH:$HOME/.local/bin"" >> ~/.zshrc
 clear
 sleep 1
 # impacket
@@ -139,7 +139,8 @@ echo "alias cl='clear' " >> .zshrc
 echo "alias impacket='pyenv activate impacket' " >> .zshrc
 echo "alias deactivate='source deactivate' " >> .zshrc
 echo "alias cme='crackmapexec' " >> .zshrc
+echo "export PATH="$PATH:$HOME/.local/bin"" >> ~/.zshrc
 clear
-sleep 3
+sleep 1
 source ~/.zshrc
 clear
