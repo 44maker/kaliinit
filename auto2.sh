@@ -110,6 +110,7 @@ sleep 2
 clear
 sleep 2
 pip install bloodyAD
+pip install pwncat-cs
 echo "export PATH="$PATH:/home/kali/.local/bin"" >> ~/.zshrc
 clear
 sleep 1
