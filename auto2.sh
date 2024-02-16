@@ -28,10 +28,6 @@ EOF
 sleep 2
 
 #go
-sudo apt-get install -y golang
-clear
-sleep 2
-
 echo 'export GOPATH=$HOME/go' >> ~/.zshrc
 echo 'export GOROOT=/usr/lib/go' >> ~/.zshrc
 echo 'export PATH=$PATH:$GOROOT/bin/:$GOPATH/bin' >> ~/.zshrc
