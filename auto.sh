@@ -79,9 +79,6 @@ sudo apt install outguess -y
 # Gobuster
 sudo apt install gobuster -y
 
-# Git-dumper
-pip3 install git-dumper
-
 # Tmux
 sudo apt install tmux -y
 
