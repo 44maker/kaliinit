@@ -30,7 +30,7 @@ sleep 3
 
 # Tools
 sudo apt install git libssl-dev libffi-dev build-essential libkrb5-dev systemd-timesyncd ntpdate gcc libmnl-dev libnftnl-dev -y
-clear
+sudo apt install rlwrap
 echo -e "\ngit libssl-dev libffi-dev build-essential is installed\n"
 sleep 3
 
