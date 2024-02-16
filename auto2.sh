@@ -71,6 +71,9 @@ sleep 2
 
 clear
 
+# githacker
+python3 -m pip install -i https://pypi.org/simple/ GitHacker
+
 #ad
 go install github.com/ropnop/kerbrute@latest
 
@@ -90,6 +93,26 @@ cd ../../
 mkdir ad&&cd ad
 git clone https://github.com/urbanadventurer/username-anarchy.git
 git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
+# impacket
+pyenv install 3.8.18
+sleep 2
+pyenv virtualenv 3.8.18 impacket
+sleep 2
+pyenv activate impacket
+sleep 2
+git clone https://github.com/ThePorgs/impacket/ 
+cd impacket
+pip3 install -r requirements.txt 
+python3 setup.py install
+
+clear
+sleep 2
+cat >> ~/.zshrc <<-'EOF'
+export PATH="$PATH:$HOME/.pyenv/versions/impacket/bin"
+EOF
+
+sleep 2
+
 cd ../
 mkdir windows && cd windows
 wget https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
@@ -114,25 +137,7 @@ sleep 2
 pip install pwncat-cs
 clear
 sleep 1
-# impacket
-pyenv install 3.8.18
-sleep 2
-pyenv virtualenv 3.8.18 impacket
-sleep 2
-pyenv activate impacket
-sleep 2
-git clone https://github.com/ThePorgs/impacket/ 
-cd impacket
-pip3 install -r requirements.txt 
-python3 setup.py install
 
-clear
-sleep 2
-cat >> ~/.zshrc <<-'EOF'
-export PATH="$PATH:$HOME/.pyenv/versions/impacket/bin"
-EOF
-
-sleep 2
 clear
 cd ~
 echo "alias cl='clear' " >> .zshrc
