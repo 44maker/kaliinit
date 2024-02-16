@@ -25,14 +25,14 @@ wget https://raw.githubusercontent.com/44maker/kaliinit/main/kalisetup.sh && chm
 # Manual installation
 ## Sublime
 ```bash
-wget https://download.sublimetext.com/sublime-text_build-4152_amd64.deb
-sudo dpkg -i sublime-text_build-4152_amd64.deb
+wget https://download.sublimetext.com/sublime-text_build-3211_amd64.deb
+sudo dpkg -i sublime-text_build-3211_amd64.deb
+rm sublime-text_build-3211_amd64.deb
 ```
 ## Starship
 ```bash
 curl -sS https://starship.rs/install.sh | sh
 echo "eval "$(starship init zsh)"" >> ~/.zshrc
-
 mkdir -p ~/.config
 cd ~/.config
 wget https://raw.githubusercontent.com/44maker/kaliinit/main/starship.toml
