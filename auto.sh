@@ -54,12 +54,13 @@ sudo gzip -d /usr/share/wordlists/rockyou.txt.gz
 
 # Zsteg
 gem install zsteg
-
+# cmseek
+sudo apt install cmseek -y
 # Steghide
 sudo apt-get install steghide -y
 
 # binwalk
-sudo apt install binwalk
+sudo apt install binwalk -y
 
 # chisel
 sudo apt-get install chisel -y
@@ -69,7 +70,8 @@ pip3 install gmpy2
 
 # Dirsearch
 sudo apt install dirsearch -y
-
+# fcrackzip
+sudo apt install fcrackzip
 # Stegseek
 wget https://github.com/RickdeJager/stegseek/releases/download/v0.6/stegseek_0.6-1.deb && dpkg -i stegseek_0.6-1.deb && rm stegseek_0.6-1.deb
 
