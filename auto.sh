@@ -83,6 +83,10 @@ sudo apt install gobuster -y
 
 # Tmux
 sudo apt install tmux -y
+# go
+sudo apt-get install -y golang
+clear
+sleep 2
 
 # Rustscan
 wget https://github.com/RustScan/RustScan/releases/download/2.0.1/rustscan_2.0.1_amd64.deb
