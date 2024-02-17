@@ -133,9 +133,10 @@ git clone https://github.com/RsaCtfTool/RsaCtfTool.git
 sleep 2
 clear
 cd ~
+sleep 1
 pip install bloodyAD
 pip install pwncat-cs
-clear
+pip install --upgrade paramiko
 sleep 1
 
 echo "alias cl='clear' " >> .zshrc
