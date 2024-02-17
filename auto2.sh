@@ -131,14 +131,13 @@ wget https://raw.githubusercontent.com/ius/rsatool/master/rsatool.py
 git clone https://github.com/RsaCtfTool/RsaCtfTool.git
 
 sleep 2
+clear
+cd ~
 pip install bloodyAD
-sleep 2
 pip install pwncat-cs
 clear
 sleep 1
 
-clear
-cd ~
 echo "alias cl='clear' " >> .zshrc
 echo "alias impacket='pyenv activate impacket' " >> .zshrc
 echo "alias deactivate='source deactivate' " >> .zshrc
