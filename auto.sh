@@ -23,7 +23,7 @@ deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
 EOF
 
 # APT update and upgrade
-sudo apt-get update -y && sudo apt-get upgrade -y
+sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt dist-upgrade -y
 clear
 echo -e "\nAPT update and upgrade is done\n"
 sleep 3
