@@ -14,7 +14,7 @@ $character"""
 
 [directory]
 style = "blue bold"
-
+truncation_length = 7
 [character]
 # 将提示符中的 '❯' 替换为 '➜'
 success_symbol = '[➜](bold green)' # 将 'success_symbol' 片段设置成颜色为 'bold green' 的 '➜'  
