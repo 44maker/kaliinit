@@ -80,7 +80,8 @@ wget https://github.com/opsec-infosec/nmap-static-binaries/releases/download/v2/
 sleep 2
 wget https://github.com/jpillora/chisel/releases/download/v1.9.1/chisel_1.9.1_linux_386.gz
 wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
-wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy64
+wget https://github.com/DominicBreuker/pspy/releases/latest/download/pspy64
+wget https://github.com/shadow1ng/fscan/releases/latest/download/fscan
 mkdir exploit && cd exploit
 curl -fsSL https://raw.githubusercontent.com/ly4k/PwnKit/main/PwnKit -o PwnKit
 wget https://raw.githubusercontent.com/Liuk3r/CVE-2023-32233/main/exploit.c && mv exploit.c CVE-2023-32233.c
@@ -105,10 +106,13 @@ cat >> ~/.zshrc <<-'EOF'
 export PATH="$PATH:$HOME/.pyenv/versions/impacket/bin"
 EOF
 cd ~
+pip install bloodyAD
+pip install pwncat-cs
 mkdir -p Tools/windows && cd Tools/windows
 wget https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
 wget https://github.com/itm4n/FullPowers/releases/download/v0.1/FullPowers.exe
 wget https://raw.githubusercontent.com/int0x33/nc.exe/master/nc64.exe
+wget https://github.com/shadow1ng/fscan/releases/latest/download/fscan.exe
 wget https://github.com/tylerdotrar/SigmaPotato/releases/latest/download/SigmaPotato.exe
 wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/winpeas.bat
 wget https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1
@@ -129,8 +133,7 @@ sleep 2
 clear
 cd ~
 sleep 1
-pip install bloodyAD
-pip install pwncat-cs
+
 pip install --upgrade paramiko
 sleep 1
 
