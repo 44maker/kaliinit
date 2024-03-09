@@ -107,8 +107,7 @@ cat >> ~/.zshrc <<-'EOF'
 export PATH="$PATH:$HOME/.pyenv/versions/impacket/bin"
 EOF
 cd ~
-pip install bloodyAD
-pip install pwncat-cs
+
 mkdir -p Tools/windows && cd Tools/windows
 wget https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
 wget https://github.com/itm4n/FullPowers/releases/download/v0.1/FullPowers.exe
@@ -143,5 +142,5 @@ echo "export PATH="$PATH:$HOME/.local/bin"" >> ~/.zshrc
 clear
 sleep 1
 source ~/.zshrc
-pip install --upgrade paramiko
+
 clear
