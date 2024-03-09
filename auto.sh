@@ -31,7 +31,9 @@ sleep 3
 # Tools
 sudo apt install git libssl-dev libffi-dev build-essential libkrb5-dev systemd-timesyncd ntpdate gcc libmnl-dev libnftnl-dev -y
 sudo apt install rlwrap code-oss -y
-echo -e "\ngit libssl-dev libffi-dev build-essential is installed\n"
+pip install bloodyAD
+pip install pwncat-cs
+pip install --upgrade paramiko
 sleep 3
 
 # rtl8812au
@@ -71,7 +73,7 @@ pip3 install gmpy2
 # Dirsearch
 sudo apt install dirsearch -y
 # fcrackzip
-sudo apt install fcrackzip
+sudo apt install fcrackzip -y
 # Stegseek
 wget https://github.com/RickdeJager/stegseek/releases/download/v0.6/stegseek_0.6-1.deb && dpkg -i stegseek_0.6-1.deb && rm stegseek_0.6-1.deb
 
