@@ -18,7 +18,7 @@ wget https://raw.githubusercontent.com/44maker/kaliinit/main/kalisetup.sh && chm
 3. pip2&pip3
 4. linpeas
 5. winpeas
-6. shell.php
+6. pspy64
 7. impacket
 8. nc64.exe
 9. ...
@@ -39,7 +39,3 @@ wget https://raw.githubusercontent.com/44maker/kaliinit/main/starship.toml
 cd ~
 source .zshrc
 ```
-
-# Todo
-- [ ] add other tools
-- [ ] fix bugs
