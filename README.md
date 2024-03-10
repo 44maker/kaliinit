@@ -6,23 +6,13 @@ sudo passwd root
 ```bash
 wget https://raw.githubusercontent.com/44maker/kaliinit/main/kalisetup.sh && chmod +x kalisetup.sh && bash kalisetup.sh
 ```
-# Basic 
-1. Delete unnecessary folders
-2. Change software source
-3. Install base package.
-4. Disable lock screen.
-
-# Tools
-1. kerbrute
-2. bloodyAD
-3. pip2&pip3
-4. linpeas
-5. winpeas
-6. pspy64
-7. impacket
-8. nc64.exe
-9. ...
 # Manual installation
+## pwncat-cs&bloodyAD
+```bash
+pip install bloodyAD
+pip install pwncat-cs
+pip install --upgrade paramiko
+```
 ## Sublime
 ```bash
 wget https://download.sublimetext.com/sublime-text_build-3211_amd64.deb
@@ -39,3 +29,21 @@ wget https://raw.githubusercontent.com/44maker/kaliinit/main/starship.toml
 cd ~
 source .zshrc
 ```
+
+
+# Basic 
+1. Delete unnecessary folders
+2. Change software source
+3. Install base package.
+4. Disable lock screen.
+
+# Tools
+1. kerbrute
+2. bloodyAD
+3. pip2&pip3
+4. linpeas
+5. winpeas
+6. pspy64
+7. impacket
+8. nc64.exe
+9. ...
