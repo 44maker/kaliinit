@@ -31,9 +31,7 @@ sleep 3
 # Tools
 sudo apt install git libssl-dev libffi-dev build-essential libkrb5-dev systemd-timesyncd ntpdate gcc libmnl-dev libnftnl-dev -y
 sudo apt install rlwrap code-oss -y
-pip install bloodyAD
-pip install pwncat-cs
-pip install --upgrade paramiko
+
 sleep 3
 
 # rtl8812au
@@ -64,8 +62,10 @@ sudo apt-get install steghide -y
 # binwalk
 sudo apt install binwalk -y
 
+# docker
+sudo apt  install docker.io -y
 # chisel
-sudo apt-get install chisel -y
+sudo apt install chisel -y
 
 # Gmpy2
 pip3 install gmpy2
