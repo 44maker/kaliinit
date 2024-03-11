@@ -29,6 +29,8 @@ wget https://raw.githubusercontent.com/44maker/kaliinit/main/starship.toml
 cd ~
 source .zshrc
 ```
+## Ligolo-ng
+https://github.com/nicocha30/ligolo-ng/
 
 
 # Basic 
