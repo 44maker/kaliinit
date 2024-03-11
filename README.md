@@ -32,6 +32,12 @@ source .zshrc
 ## Ligolo-ng
 https://github.com/nicocha30/ligolo-ng/
 
+## AutoRecon
+https://github.com/Tib3rius/AutoRecon
+
+## OSCP Report
+https://github.com/noraj/OSCP-Exam-Report-Template-Markdown
+
 
 # Basic 
 1. Delete unnecessary folders
