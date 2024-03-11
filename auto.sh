@@ -31,7 +31,7 @@ sleep 3
 # Tools
 sudo apt install git libssl-dev libffi-dev build-essential libkrb5-dev systemd-timesyncd ntpdate gcc libmnl-dev libnftnl-dev -y
 sudo apt install rlwrap code-oss -y
-
+sudo apt install seclists curl dnsrecon enum4linux feroxbuster gobuster impacket-scripts nbtscan nikto nmap onesixtyone oscanner redis-tools smbclient smbmap snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf -y
 sleep 3
 
 # rtl8812au
