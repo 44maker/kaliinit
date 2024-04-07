@@ -29,6 +29,11 @@ wget https://raw.githubusercontent.com/44maker/kaliinit/main/starship.toml
 cd ~
 source .zshrc
 ```
+## RSAcrack
+```bash
+wget --no-check-certificate -q "https://raw.githubusercontent.com/d4t4s3c/RSAcrack/main/RSAcrack" -O /usr/bin/RSAcrack && chmod +x /usr/bin/RSAcrack
+```
+
 ## Ligolo-ng
 https://github.com/nicocha30/ligolo-ng/
 
