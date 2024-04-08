@@ -62,8 +62,6 @@ sudo apt-get install steghide -y
 # binwalk
 sudo apt install binwalk -y
 
-# docker
-sudo apt  install docker.io -y
 # chisel
 sudo apt install chisel -y
 
