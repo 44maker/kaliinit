@@ -85,7 +85,6 @@ wget https://github.com/shadow1ng/fscan/releases/latest/download/fscan
 mkdir exploit && cd exploit
 curl -fsSL https://raw.githubusercontent.com/ly4k/PwnKit/main/PwnKit -o PwnKit
 wget https://raw.githubusercontent.com/Liuk3r/CVE-2023-32233/main/exploit.c && mv exploit.c CVE-2023-32233.c
-wget https://github.com/44maker/kaliinit/raw/main/CVE-2023-32233.zip
 wget https://raw.githubusercontent.com/Arinerron/CVE-2022-0847-DirtyPipe-Exploit/main/exploit.c && mv exploit.c dirtypipe.c
 cd ~
 mkdir -p Tools/ad && cd Tools/ad
