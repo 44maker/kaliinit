@@ -1,7 +1,4 @@
 format = """
-$username\
-$hostname\
-$localip\
 $python\
 $directory\
 $git_branch\
@@ -10,6 +7,9 @@ $git_status\
 $line_break\
 $character"""
 
+
+add_newline = false
+
 "$schema" = 'https://starship.rs/config-schema.json'
 
 [directory]
@@ -17,13 +17,8 @@ style = "blue bold"
 truncation_length = 7
 [character]
 # 将提示符中的 '❯' 替换为 '➜'
-success_symbol = '[➜](bold green)' # 将 'success_symbol' 片段设置成颜色为 'bold green' 的 '➜'  
-error_symbol = "[➜](red)"
-
-[localip]
-ssh_only = true
-format = '[$localipv4](bold red) '
-disabled = false
+success_symbol = '[➜ ](bold green)' # 将 'success_symbol' 片段设置成颜色为 'bold green' 的 '➜'  
+error_symbol = "[➜ ](red)"
 
 [git_branch]
 format = "[$branch]($style)"
@@ -47,5 +42,4 @@ style = "bright-black"
 
 [python]
 format = "( [$virtualenv]($style) )"
-style = "yellow bold"
-
+style = "blue bold"
